@@ -37,79 +37,27 @@
             </div>
         </section>
 
-        <!-- 연락처 정보 -->
-        <section class="contact-info upgraded-contact-info">
-            <div class="container">
-                <div class="contact-grid upgraded-contact-grid">
-                    <div class="contact-card upgraded-contact-card">
-                        <div class="contact-icon upgraded-contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>이메일</h3>
-                        <p>cscompany0088@naver.com</p>
+        <!-- 새 연락처/문의 섹션 -->
+        <section style="display:flex; justify-content:center; align-items:center; min-height:60vh; background:linear-gradient(120deg,#f0f4ff 0%,#e0e7ef 100%); padding:5rem 0;">
+            <div style="background:#fff; border-radius:32px; box-shadow:0 8px 32px rgba(80,120,200,0.10); padding:3.5rem 2.5rem; max-width:1100px; width:100%; display:flex; flex-direction:column; align-items:center;">
+                <h2 style="font-size:2.3rem; font-weight:800; color:#23272f; margin-bottom:0.7rem; letter-spacing:-1px; text-align:center;">연락처 및 문의</h2>
+                <p style="font-size:1.15rem; color:#64748b; margin-bottom:2.5rem; text-align:center;">궁금한 점이 있으시면 언제든 연락주세요.<br>카카오톡 오픈채팅으로 빠르게 상담 가능합니다.</p>
+                <div style="display:flex; gap:2.5rem; flex-wrap:wrap; justify-content:center; width:100%; max-width:900px;">
+                    <div style="flex:1 1 220px; min-width:220px; max-width:300px; background:linear-gradient(135deg,#f0f4ff 60%,#e0e7ef 100%); border-radius:20px; box-shadow:0 4px 16px rgba(80,120,200,0.07); padding:2.2rem 1.2rem; display:flex; flex-direction:column; align-items:center; margin-bottom:1rem;">
+                        <div style="background:linear-gradient(135deg,#4f8cff 0%,#6ee7b7 100%); color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1.1rem;"><i class="fas fa-envelope"></i></div>
+                        <div style="font-weight:700; color:#23272f; font-size:1.13rem; margin-bottom:0.3rem;">이메일</div>
+                        <div style="color:#64748b; font-size:1rem; word-break:break-all;">cscompany0088@naver.com</div>
                     </div>
-                    <div class="contact-card upgraded-contact-card">
-                        <div class="contact-icon upgraded-contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h3>주소</h3>
-                        <p>경기도 평택시 중앙로 199, 7층 80호</p>
+                    <div style="flex:1 1 220px; min-width:220px; max-width:300px; background:linear-gradient(135deg,#f0f4ff 60%,#e0e7ef 100%); border-radius:20px; box-shadow:0 4px 16px rgba(80,120,200,0.07); padding:2.2rem 1.2rem; display:flex; flex-direction:column; align-items:center; margin-bottom:1rem;">
+                        <div style="background:linear-gradient(135deg,#6ee7b7 0%,#4f8cff 100%); color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1.1rem;"><i class="fas fa-map-marker-alt"></i></div>
+                        <div style="font-weight:700; color:#23272f; font-size:1.13rem; margin-bottom:0.3rem;">주소</div>
+                        <div style="color:#64748b; font-size:1rem; word-break:keep-all;">경기도 평택시 중앙로 199, 7층 80호</div>
                     </div>
-                    <div class="contact-card upgraded-contact-card">
-                        <div class="contact-icon upgraded-contact-icon">
-                            <i class="fas fa-comment-dots" style="color:#3C1E1E;"></i>
-                        </div>
-                        <h3>카카오톡</h3>
-                        <a href="https://open.kakao.com/o/sOy4U8yh" target="_blank" style="display:inline-block; margin-top:0.5rem; font-weight:bold; color:#3C1E1E; text-decoration:none; font-size:1.1rem;">
-                            오픈채팅 바로가기
-                        </a>
+                    <div style="flex:1 1 220px; min-width:220px; max-width:300px; background:linear-gradient(135deg,#f0f4ff 60%,#e0e7ef 100%); border-radius:20px; box-shadow:0 4px 16px rgba(80,120,200,0.07); padding:2.2rem 1.2rem; display:flex; flex-direction:column; align-items:center; margin-bottom:1rem;">
+                        <div style="background:linear-gradient(135deg,#FEE500 0%,#4f8cff 100%); color:#3C1E1E; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; margin-bottom:1.1rem;"><i class="fas fa-comment-dots"></i></div>
+                        <div style="font-weight:700; color:#23272f; font-size:1.13rem; margin-bottom:0.3rem;">카카오톡</div>
+                        <a href="https://open.kakao.com/o/sOy4U8yh" target="_blank" style="display:inline-block; margin-top:0.7rem; font-weight:bold; color:#3C1E1E; text-decoration:none; font-size:1.08rem; background:#FEE500; padding:0.8rem 1.7rem; border-radius:10px; box-shadow:0 2px 8px rgba(80,120,200,0.10); transition:background 0.2s;">오픈채팅 바로가기</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 문의 양식 -->
-        <section class="contact-form upgraded-contact-form">
-            <div class="container">
-                <h2>문의하기</h2>
-                <form id="inquiryForm">
-                    <div class="form-group upgraded-form-group">
-                        <label for="name">이름</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group upgraded-form-group">
-                        <label for="phone">연락처</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group upgraded-form-group">
-                        <label for="email">이메일</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group upgraded-form-group">
-                        <label for="service">문의 서비스</label>
-                        <select id="service" name="service" required>
-                            <option value="">선택해주세요</option>
-                            <option value="cctv">CCTV 설치</option>
-                            <option value="security">보안 시스템</option>
-                            <option value="maintenance">유지보수</option>
-                            <option value="other">기타 문의</option>
-                        </select>
-                    </div>
-                    <div class="form-group upgraded-form-group">
-                        <label for="message">문의 내용</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button upgraded-submit-button">문의하기</button>
-                </form>
-            </div>
-        </section>
-
-        <!-- 지도 -->
-        <section class="map-section">
-            <div class="container">
-                <h2>오시는 길</h2>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.1234567890123!2d128.12345678901234!3d35.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDA3JzI0LjQiTiAxMjDCsDA3JzI0LjQiRQ!5e0!3m2!1sko!2skr!4v1234567890123!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>

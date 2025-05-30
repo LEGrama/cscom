@@ -25,6 +25,9 @@ filterButtons.forEach(button => {
                 }, 300);
             }
         });
+
+        // 라이트박스 이미지 배열도 현재 보이는 것만으로 재설정
+        initializeImages();
     });
 });
 

@@ -1300,4 +1300,235 @@ section h2::after {
     .lightbox-caption p {
         font-size: 0.875rem;
     }
+}
+
+/* 업그레이드된 서비스 카드 */
+.upgraded-services {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    padding: 6rem 0 7rem 0;
+    border-radius: 32px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(80,120,200,0.07);
+}
+.upgraded-services-grid {
+    gap: 2.5rem;
+}
+.upgraded-service-card {
+    background: linear-gradient(135deg, #fff 60%, #f0f4ff 100%);
+    border-radius: 24px;
+    box-shadow: 0 6px 24px rgba(80,120,200,0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e3e8f0;
+    padding-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.upgraded-service-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 32px rgba(80,120,200,0.18);
+}
+.upgraded-service-icon {
+    background: linear-gradient(135deg, #4f8cff 0%, #6ee7b7 100%);
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 2rem auto 1.5rem auto;
+    box-shadow: 0 4px 16px rgba(80,120,200,0.10);
+}
+.upgraded-service-card h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+.upgraded-service-card p {
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+.upgraded-service-card ul {
+    padding-left: 1.2rem;
+    color: #475569;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.upgraded-service-card ul li {
+    margin-bottom: 0.3rem;
+    list-style: disc;
+}
+
+/* 업그레이드된 서비스 프로세스 */
+.upgraded-process {
+    background: linear-gradient(90deg, #e0e7ef 0%, #f8fafc 100%);
+    padding: 5rem 0 6rem 0;
+    border-radius: 32px;
+    margin-bottom: 3rem;
+}
+.upgraded-process-steps {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+.upgraded-process-step {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(80,120,200,0.10);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    min-width: 200px;
+    max-width: 260px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.upgraded-process-step:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 12px 32px rgba(80,120,200,0.15);
+}
+.upgraded-step-number {
+    background: linear-gradient(135deg, #4f8cff 0%, #6ee7b7 100%);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin: 0 auto 1rem auto;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(80,120,200,0.10);
+}
+.upgraded-process-step h3 {
+    color: #1e293b;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+.upgraded-process-step p {
+    color: #64748b;
+    font-size: 0.98rem;
+}
+
+/* 업그레이드된 연락처 카드 */
+.upgraded-contact-info {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ef 100%);
+    padding: 6rem 0 5rem 0;
+    border-radius: 32px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(80,120,200,0.07);
+}
+.upgraded-contact-grid {
+    gap: 2.5rem;
+}
+.upgraded-contact-card {
+    background: linear-gradient(135deg, #fff 60%, #f0f4ff 100%);
+    border-radius: 24px;
+    box-shadow: 0 6px 24px rgba(80,120,200,0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e3e8f0;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.upgraded-contact-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 32px rgba(80,120,200,0.18);
+}
+.upgraded-contact-icon {
+    background: linear-gradient(135deg, #4f8cff 0%, #6ee7b7 100%);
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    margin: 1.5rem auto 1rem auto;
+    box-shadow: 0 4px 16px rgba(80,120,200,0.10);
+}
+.upgraded-contact-card h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+.upgraded-contact-card p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* 업그레이드된 문의 폼 */
+.upgraded-contact-form {
+    background: linear-gradient(135deg, #e0e7ef 0%, #f8fafc 100%);
+    padding: 4rem 0 5rem 0;
+    border-radius: 32px;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(80,120,200,0.07);
+}
+.upgraded-form-group {
+    margin-bottom: 1.5rem;
+}
+.upgraded-contact-form input,
+.upgraded-contact-form select,
+.upgraded-contact-form textarea {
+    width: 100%;
+    padding: 1.1rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    background: #fff;
+    transition: border 0.2s;
+    margin-top: 0.3rem;
+}
+.upgraded-contact-form input:focus,
+.upgraded-contact-form select:focus,
+.upgraded-contact-form textarea:focus {
+    border: 1.5px solid #4f8cff;
+    outline: none;
+}
+.upgraded-submit-button {
+    width: 100%;
+    padding: 1.1rem;
+    background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(80,120,200,0.10);
+    transition: background 0.3s, transform 0.2s;
+}
+.upgraded-submit-button:hover {
+    background: linear-gradient(90deg, #6ee7b7 0%, #4f8cff 100%);
+    transform: translateY(-2px) scale(1.01);
+}
+
+@media (max-width: 900px) {
+    .upgraded-process-steps {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+@media (max-width: 600px) {
+    .upgraded-services, .upgraded-process, .upgraded-contact-info, .upgraded-contact-form {
+        padding: 2.5rem 0 2.5rem 0;
+        border-radius: 18px;
+    }
+    .upgraded-service-card, .upgraded-contact-card, .upgraded-process-step {
+        border-radius: 12px;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    }
+    .upgraded-service-icon, .upgraded-contact-icon, .upgraded-step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
 } 

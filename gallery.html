@@ -52,67 +52,8 @@
         <!-- 갤러리 그리드 -->
         <section class="gallery-grid">
             <div class="container">
-                <div class="gallery-container">
-                    <!-- 주거시설 -->
-                    <div class="gallery-item" data-category="residential">
-                        <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="아파트 CCTV">
-                        </div>
-                        <div class="gallery-overlay">
-                            <h3>평택 아파트 CCTV 설치</h3>
-                            <p>2024년 3월 완공</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="residential">
-                        <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="주택 CCTV">
-                        </div>
-                        <div class="gallery-overlay">
-                            <h3>평택 주택 CCTV 설치</h3>
-                            <p>2024년 2월 완공</p>
-                        </div>
-                    </div>
-
-                    <!-- 상업시설 -->
-                    <div class="gallery-item" data-category="commercial">
-                        <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="상가 CCTV">
-                        </div>
-                        <div class="gallery-overlay">
-                            <h3>거창 상가 CCTV 설치</h3>
-                            <p>2024년 2월 완공</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="commercial">
-                        <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="사무실 CCTV">
-                        </div>
-                        <div class="gallery-overlay">
-                            <h3>거창 사무실 CCTV 설치</h3>
-                            <p>2024년 1월 완공</p>
-                        </div>
-                    </div>
-
-                    <!-- 산업시설 -->
-                    <div class="gallery-item" data-category="industrial">
-                        <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="공장 CCTV">
-                        </div>
-                        <div class="gallery-overlay">
-                            <h3>거창 산업단지 CCTV 설치</h3>
-                            <p>2024년 1월 완공</p>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-category="industrial">
-                        <div class="gallery-image">
-                            <img src="https://images.unsplash.com/photo-1581092921461-39b9d08a9b21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="창고 CCTV">
-                        </div>
-                        <div class="gallery-overlay">
-                            <h3>평택 창고 CCTV 설치</h3>
-                            <p>2023년 12월 완공</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- 이미지는 images/gallery/카테고리폴더/번호.jpg 식으로 넣으세요. gallery-data.js에서 설명/경로를 관리합니다. -->
+                <div class="gallery-container" id="gallery-container"></div>
             </div>
         </section>
 
@@ -141,5 +82,21 @@
 
     <script src="script.js"></script>
     <script src="gallery.js"></script>
+    <script src="gallery-data.js"></script>
+    <script>
+    galleryData.forEach(item => {
+      document.getElementById('gallery-container').innerHTML += `
+        <div class="gallery-item" data-category="${item.category}">
+          <div class="gallery-image">
+            <img src="${item.src}" alt="${item.title}">
+          </div>
+          <div class="gallery-overlay">
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+          </div>
+        </div>
+      `;
+    });
+    </script>
 </body>
 </html> 

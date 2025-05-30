@@ -820,26 +820,22 @@ section h2::after {
 
 /* 페이지 히어로 섹션 */
 .page-hero {
-    height: 50vh;
+    height: 44vh;
+    background: #f8fafc !important;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: #23272f;
     position: relative;
     margin-top: 80px;
+    box-shadow: 0 4px 24px rgba(80,120,200,0.06);
 }
 
 .page-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    content: none !important;
 }
 
 .page-hero .hero-content {
@@ -848,14 +844,18 @@ section h2::after {
 }
 
 .page-hero h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 800;
+    color: #23272f;
+    letter-spacing: -1px;
 }
 
 .page-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+    font-size: 1.15rem;
+    opacity: 1;
+    color: #64748b;
+    font-weight: 400;
 }
 
 /* 회사 소개 본문 */

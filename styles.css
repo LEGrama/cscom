@@ -1531,4 +1531,46 @@ section h2::after {
         height: 40px;
         font-size: 1.1rem;
     }
+}
+
+/* Hero full background and dynamic elements */
+.hero-full-bg {
+    background: linear-gradient(180deg, #888 0%, #e0e7ef 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-bg-elements {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+.bg-circle {
+    filter: blur(2px);
+}
+.bg-icon {
+    filter: blur(0.5px);
+}
+.btn-glow {
+    box-shadow: 0 0 16px 4px #4f8cff, 0 0 32px 8px #6ee7b7;
+    border-color: #4f8cff !important;
+    background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%) !important;
+    color: #fff !important;
+    transition: box-shadow 0.3s, background 0.3s, color 0.3s;
+}
+@media (max-width: 900px) {
+    .hero-bg-elements {
+        width: 100vw;
+        height: 60vh;
+    }
+    .bg-circle, .bg-icon {
+        display: none;
+    }
 } 

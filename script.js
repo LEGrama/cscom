@@ -126,4 +126,157 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
-}); 
+});
+
+// CCTV spotlight and thief animation for service cards
+
+document.querySelectorAll('.cctv-spotlight-container').forEach(container => {
+    const svg = container.querySelector('svg');
+    if (!svg) return;
+    const spotlight = svg.querySelector('.spotlight-beam');
+    const thief = svg.querySelector('.thief-group');
+    const surpriseLine = svg.querySelector('.surprise-line');
+
+    container.addEventListener('mouseenter', () => {
+        if (spotlight) spotlight.setAttribute('opacity', '1');
+        if (thief) thief.setAttribute('opacity', '1');
+        if (surpriseLine) {
+            surpriseLine.setAttribute('opacity', '1');
+            surpriseLine.animate([
+                { transform: 'scaleY(0.2)' },
+                { transform: 'scaleY(1.2)' },
+                { transform: 'scaleY(1)' }
+            ], {
+                duration: 400,
+                fill: 'forwards'
+            });
+        }
+        // Thief jump animation
+        if (thief) {
+            thief.animate([
+                { transform: 'translateY(0)' },
+                { transform: 'translateY(-10px)' },
+                { transform: 'translateY(0)' }
+            ], {
+                duration: 400,
+                fill: 'forwards'
+            });
+        }
+    });
+    container.addEventListener('mouseleave', () => {
+        if (spotlight) spotlight.setAttribute('opacity', '0');
+        if (thief) thief.setAttribute('opacity', '0');
+        if (surpriseLine) surpriseLine.setAttribute('opacity', '0');
+    });
+});
+
+// More dynamic CCTV spotlight and thief animation for hero section
+(function() {
+    const svg = document.getElementById('cctv-thief-hero-svg');
+    if (!svg) return;
+    const spotlight = svg.querySelector('.spotlight-beam');
+    const thiefGroup = svg.querySelector('.thief-group');
+    const eyeLeft = svg.querySelector('.thief-eye-left');
+    const eyeRight = svg.querySelector('.thief-eye-right');
+    const eyeLeftCry = svg.querySelector('.thief-eye-left-cry');
+    const eyeRightCry = svg.querySelector('.thief-eye-right-cry');
+    const tearLeft = svg.querySelector('.thief-tear-left');
+    const tearRight = svg.querySelector('.thief-tear-right');
+    const mouth = svg.querySelector('.thief-mouth');
+    const mouthCry = svg.querySelector('.thief-mouth-cry');
+    const surpriseLine = svg.querySelector('.surprise-line');
+    const lensGlint = svg.querySelector('.lens-glint');
+    const contactBtn = document.querySelector('.hero-contact-btn');
+
+    // Thief initial movement (looping left-to-right)
+    let thiefMoving = true;
+    let thiefX = 0;
+    let thiefDir = 1;
+    function moveThief() {
+        if (!thiefMoving) return;
+        thiefX += 0.7 * thiefDir;
+        if (thiefX > 80) thiefDir = -1;
+        if (thiefX < -40) thiefDir = 1;
+        thiefGroup.setAttribute('transform', `translate(${900 + thiefX},480)`);
+        requestAnimationFrame(moveThief);
+    }
+    moveThief();
+
+    function animateCCTV() {
+        // Stop thief movement
+        thiefMoving = false;
+        // Spotlight beam animation
+        if (spotlight) {
+            spotlight.setAttribute('opacity', '1');
+            spotlight.animate([
+                { opacity: 0 },
+                { opacity: 1 }
+            ], {
+                duration: 400,
+                fill: 'forwards'
+            });
+        }
+        // Thief jump and cry
+        if (thiefGroup) {
+            thiefGroup.animate([
+                { transform: `translate(${900 + thiefX},480)` },
+                { transform: `translate(${900 + thiefX},465) scale(1.05)` },
+                { transform: `translate(${900 + thiefX},480)` }
+            ], {
+                duration: 500,
+                fill: 'forwards'
+            });
+        }
+        // Eyes/mouth to crying
+        if (eyeLeftCry) eyeLeftCry.setAttribute('opacity', '1');
+        if (eyeRightCry) eyeRightCry.setAttribute('opacity', '1');
+        if (eyeLeft) eyeLeft.setAttribute('opacity', '0');
+        if (eyeRight) eyeRight.setAttribute('opacity', '0');
+        if (mouthCry) mouthCry.setAttribute('opacity', '1');
+        if (mouth) mouth.setAttribute('opacity', '0');
+        if (tearLeft) tearLeft.setAttribute('opacity', '1');
+        if (tearRight) tearRight.setAttribute('opacity', '1');
+        // Surprise line
+        if (surpriseLine) {
+            surpriseLine.setAttribute('opacity', '1');
+            surpriseLine.animate([
+                { transform: 'scaleY(0.2)' },
+                { transform: 'scaleY(1.2)' },
+                { transform: 'scaleY(1)' }
+            ], {
+                duration: 400,
+                fill: 'forwards'
+            });
+        }
+        // Lens sparkle
+        if (lensGlint) {
+            lensGlint.animate([
+                { opacity: 0.7, transform: 'scale(1)' },
+                { opacity: 1, transform: 'scale(1.3)' },
+                { opacity: 0.7, transform: 'scale(1)' }
+            ], {
+                duration: 600,
+                fill: 'forwards'
+            });
+        }
+    }
+    function resetCCTV() {
+        // Resume thief movement
+        thiefMoving = true;
+        moveThief();
+        if (spotlight) spotlight.setAttribute('opacity', '0');
+        if (eyeLeftCry) eyeLeftCry.setAttribute('opacity', '0');
+        if (eyeRightCry) eyeRightCry.setAttribute('opacity', '0');
+        if (eyeLeft) eyeLeft.setAttribute('opacity', '1');
+        if (eyeRight) eyeRight.setAttribute('opacity', '1');
+        if (mouthCry) mouthCry.setAttribute('opacity', '0');
+        if (mouth) mouth.setAttribute('opacity', '1');
+        if (tearLeft) tearLeft.setAttribute('opacity', '0');
+        if (tearRight) tearRight.setAttribute('opacity', '0');
+        if (surpriseLine) surpriseLine.setAttribute('opacity', '0');
+    }
+    if (contactBtn) {
+        contactBtn.addEventListener('mouseenter', animateCCTV);
+        contactBtn.addEventListener('mouseleave', resetCCTV);
+    }
+})(); 
